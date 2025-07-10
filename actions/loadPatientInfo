@@ -1,0 +1,13 @@
+IMAGE
+<*, *, *, *>:  img/database.png
+----
+TEXT_title
+<*, *, *, *>: Loading ...
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Hey_1
+----
+TTS
+<*,*,*,*>:  Loading
+----
+

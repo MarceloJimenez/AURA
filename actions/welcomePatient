@@ -1,0 +1,16 @@
+IMAGE
+<*, *, *, *>:  img/greeting.jpg
+----
+TEXT_title
+<*, *, *, *>:  Welcome Marcelo!
+----
+TEXT
+<*,*,*,*>: How are you today?
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Hey_1
+----
+TTS
+<*,*,*,*>:  Welcome Marcelo! I hope you are having a great day. Let me load your information. Just one second.
+----
+

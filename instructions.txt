@@ -1,0 +1,51 @@
+If you havent build the image. Follow : 
+https://bitbucket.org/iocchi/hri_software/src/7ee6a9cdb3c3d3ebf437b52c2f1ab42050aa829e/docker/README.md
+
+TO run:
+
+> cd hri_software/docker
+> ./run.bash
+
+In a new terminal, acces de container:
+
+> docker exec -it pepperhri tmux a
+
+A tmux terminal will open with several windows with pre loaded testing commands. See tmux_cheat_sheet.txt.
+The next commands are preloaded in the different  tmux windows. Use " Ctr+b release w"  hotkey to navigate. If not create  new windows and run the following commands separately en each one.
+
+Run Naoqi:
+
+> cd /opt/Aldebaran/naoqi-sdk-2.5.7.1-linux64
+> ./naoqi
+
+
+Run Modim server:
+
+> cd ~/src/modim/src/GUI
+> python ws_server.py -robot pepper
+
+
+In a OS system, Run the web server for custom  demo
+
+> cd hri_software/docker
+> ./run_nginx.bash $HOME/playground/AURA
+
+Connect with a browser from the local host
+
+> http://localhost
+
+
+Back in the docker container, RUn the MODIM demo:
+
+> cd ~/playground/AURA/scripts
+> python start.py
+
+
+To simulate the front sonar sensor value(in a new terminal inside the container [ctrl +b  release }}:
+
+> cd $PEPPER_TOOLS_HOME/sonar
+> python sonar_sim.py --sensor SonarFront --value 0.75
+
+
+
+

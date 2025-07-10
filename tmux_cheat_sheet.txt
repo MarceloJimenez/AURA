@@ -1,0 +1,40 @@
+=== tmux Cheat Sheet ===
+
+Prefix: Ctrl + b  
+
+Type prefix, release and then:
+
+Basic commands (after prefix):
+  w       - See all windows
+  c       - Create new window
+  n       - Next window
+  p       - Previous window
+  &       - Close current window
+  ,       - Rename current window
+  "       - Split panel horizontally
+  %       - Split panel vertically
+  o       - Switch to next panel
+  x       - Close current panel
+  z       - Toggle panel zoom
+  d       - Detach session
+  [       - Enter copy mode
+  ]       - Paste buffer
+  ?       - Show key bindings
+
+Panel navigation:
+  ← ↑ ↓ → - Move between panes
+  q       - Show pane numbers
+
+Sessions (from shell):
+  tmux                    - Start new session
+  tmux new -s name        - Start session with name
+  tmux ls                 - List sessions
+  tmux attach -t name     - Attach to session
+  tmux kill-session -t n  - Kill session
+
+Copy mode (after [):
+  ↑ ↓     - Move
+  /text   - Search
+  Space   - Start selection
+  Enter   - Copy selection
+

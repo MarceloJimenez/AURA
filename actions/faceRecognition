@@ -1,0 +1,21 @@
+IMAGE
+<*, *, *, *>:  img/faceRecognition.png
+----
+TEXT_title
+<*, *, *, *>:  Identifying Patient ... 
+----
+TEXT
+<*,*,*,*>: &nbsp
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Explain_10
+----
+TTS
+<*,*,*,*>:  Stand still in front of me so I can recognize your face!
+----
+BUTTONS
+welcomePatient
+<*,*,*,*>:  I am a patient!
+askQuestion
+<*,*,*,*>:  I am not a patient
+----
