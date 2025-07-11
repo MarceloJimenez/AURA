@@ -1,0 +1,17 @@
+TEXT_title
+<*,*,*,*>: Ask me a question!
+----
+IMAGE
+<*,*,*,*>: img/chat.png
+----
+TEXT
+<*,*,*,*>: Chat with me.
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Explain_5
+----
+TTS
+<*,*,*,*>: Lets talks, you can ask me anything you want.
+----
+
+

@@ -1,0 +1,25 @@
+TEXT_title
+<*,*,*,*>: Patient Profile
+----
+IMAGE
+<*,*,*,*>: img/profile.png
+----
+TEXT
+<*,*,*,*>: Is time for your medication?
+----
+ASR
+<*,*,*,*>: {'medication': ['yes','please','give me'], 'chatInterface': ['no','question','not now']}
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Explain_10
+----
+TTS
+<*,*,*,*>: Is time for your medication?
+----
+BUTTONS
+medication
+<*,*,*,*>: yes
+chatInterface
+<*,*,*,*>: No
+----
+

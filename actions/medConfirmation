@@ -1,0 +1,25 @@
+TEXT_title
+<*,*,*,*>: Medication
+----
+IMAGE
+<*,*,*,*>: img/medication.png
+----
+TEXT
+<*,*,*,*>: Take your medicine and confirm please.
+----
+ASR
+<*,*,*,*>: {'finish': ['yes','ok','confirm'], 'no': ['no','I dont want']}
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Explain_1
+----
+TTS
+<*,*,*,*>: Take your medicine and confirm please.
+----
+BUTTONS
+finish
+<*,*,*,*>: Ok
+no
+<*,*,*,*>: No
+----
+

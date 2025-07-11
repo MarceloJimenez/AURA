@@ -1,7 +1,10 @@
-If you havent build the image. Follow : 
+If you havent build the image for the docker container. Follow : 
+
 https://bitbucket.org/iocchi/hri_software/src/7ee6a9cdb3c3d3ebf437b52c2f1ab42050aa829e/docker/README.md
 
-TO run:
+Before building , it was added  > apt install -y espeak && \ to the Dockerfile, in order to simulate speech.
+
+TO run the docker container:
 
 > cd hri_software/docker
 > ./run.bash

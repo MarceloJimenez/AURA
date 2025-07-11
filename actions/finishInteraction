@@ -1,0 +1,16 @@
+TEXT_title
+<*,*,*,*>: Thanks!
+----
+IMAGE
+<*,*,*,*>: img/smile.png
+----
+TEXT
+<*,*,*,*>: Bye! I hope I was helpful to you!
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Hey_6
+----
+TTS
+<*,*,*,*>: Bye! I hope I was helpful to you!
+----
+

@@ -1,5 +1,5 @@
 IMAGE
-<*, *, *, *>:  img/greeting.png
+<*, *, *, *>:  img/greeting2.png
 ----
 TEXT_title
 <*, *, *, *>:  Hi there! 
@@ -11,15 +11,7 @@ GESTURE
 <*,*,*,*>: animations/Stand/Gestures/Hey_1
 ----
 TTS
-<*,*,*,*>:  Hello! I am AURA, your robotic assistant for elderly care ! You can talk to me, or if you prefer, click the tablet navigate my actions. If you are my patient please hold still in front of me so I can recognize you.
+<*,*,*,*>:  Hello! I am AURA, your robotic assistant for elderly care ! 
 ----
-ASR
-<*,*,*,*>:  {'faceRecognition': ['yes'], 'fullmap': ['no']}
-----
-<!-- BUTTONS
-faceRecognition
-<*,*,*,*>:  Yes
-askQuestion
-<*,*,*,*>:  No
----- -->
+
 
