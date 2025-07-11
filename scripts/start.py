@@ -13,8 +13,6 @@ def intStart():
 
 	while True:
 		im.init()
-		flag = False
-		flag2 = False
 		flagP = False
 		detected = False
 
@@ -38,77 +36,63 @@ def intStart():
 					print('*Person gone*')
 		im.robot.stopSensorMonitor()
 
+
 		#Starting the script when human stays 2+ seconds
 		im.execute('greeting')
-		subprocess.call(['espeak', 'Hello! I am AURA, your robotic assistant for elderly care ! You can talk to me, or if you prefer, click the tablet navigate my actions. If you are my patient please hold still in front of me so I can recognize you.'])
-		# a0 = im.ask('greeting', timeout=999)
+		subprocess.call(['espeak', 'Hello! I am AURA, your robotic assistant for elderly care ! You can talk to me, or if you prefer, click the tablet to navigate my actions '])
 		im.execute('faceRecognition')
 		subprocess.call(['espeak', 'Stand still in front of me so I can recognize your face!'])
 		a0 = im.ask('faceRecognition', timeout=999)
 
-
 		#If it is a patient, load its information	
 		if a0 == 'welcomePatient':
-			im.execute(a0) 
+			im.execute('welcomePatient') 
 			subprocess.call(['espeak', 'Welcome Marcelo! I hope you are having a great day. Let me load your information. Just one second.' ])
-			im.execute('introtour')
-			t0 = im.ask('introtour',timeout=999)
+			im.execute('patientProfile')
+			subprocess.call(['espeak', 'Is time for your medication?' ])
+			t0 = im.ask('patientProfile',timeout=999)
 			
-			#Ask if the new visitor wants a tour
-			if t0 == 'tour':
-				im.execute('tour1')
-				im.execute('tour1map')
-				time.sleep(3)
-				im.execute('tour2')
-				im.execute('tour2map')
-				time.sleep(3)
-				im.execute('tour3')
-				im.execute('tour3map')
-				time.sleep(3)
+			#If its time for medication
+			if t0 == 'medication':
+				im.execute('medConfirmation')
+				subprocess.call(['espeak', 'Take your medicine and confirm please.' ])
+				m0 = im.ask('medConfirmation')
 
-		else:
-			im.executeModality('TTS','Fine, we have an expert here!')
-
-		#Main loop of the project, it returns over the map to ask for works
-		while not flag:
-
-			#If it is the first time that the user view the map, some specific words are shown
-			if not flag2: 		
-				im.executeModality('TTS','This is the full map of the museum. Are you interested in any particular work?')
-				im.executeModality('TEXT_default','Are you interested in any particular work?')	
-				flag2 = True	
-			#Otherwise Pepper TTS and the html change
-			else:
-				im.executeModality('TEXT_default','Are you interested in any other work?')
-				im.executeModality('TTS','Are you interested in any other work?')
+				#If patient took medication
+				if m0 == 'finish':
+					im.execute('finishInteraction')
+					subprocess.call(['espeak', 'Bye! I hope I was helpful to you!' ])
+				#If patient did not took medication
+				else:
+					im.execute('chatInterface')
+					subprocess.call(['espeak', 'Lets talk' ])
+					im.execute('medConfirmation')
+					subprocess.call(['espeak', 'Take your medicine and confirm please.' ])
+					m1 = im.ask('medConfirmation')
 					
-			a = im.ask('fullmap',timeout=5)
+					#if patient was convinced to take medication
+					if m1 == 'yes':
+						im.execute('finishInteraction')
+				 	# if he is still reluctant to medication
+					else:
+						im.execute('humanIntervention')
+						subprocess.call(['espeak', 'I am calling a nurse, please remain calm.' ])
+						im.execute('finishInteraction')
 
-			while a=='timeout':
-				im.executeModality('TTS','I did not understand, can you repeat please? You can also use buttons on the tablet.')
-				a = im.ask('fullmap',timeout=5)
-				if flag2:			
-					im.executeModality('TEXT_default','Are you interested in any other work?')
-					im.executeModality('TTS','Are you interested in any other work?')
-
-			#Checking if user want to stop the trip
-			if a=='goodbye':
-				flag=True
-				im.execute('goodbye')
-				break		
+			# if its not time for medication
 			else:
-				im.execute(a)
-				a2 = im.ask(a,timeout=999)
 				
-				#Checking if user does not want directions				
-				if a2=='fullmap':		
-					im.execute(a2)
-				else: 
-					im.execute(a2)
-					time.sleep(4)	
-					im.execute('fullmap')
+				im.execute('chatInterface')
+				subprocess.call(['espeak', 'No medication for you now. How can I help you?'])
+				im.execute('finishInteraction')
+
+		#If it is not a patient, offer help	
+		else:
 			
-		time.sleep(6)
+			im.execute('chatInterface')	
+			subprocess.call(['espeak', 'You are not a patient. How can I help you?'])	
+			im.execute('finishInteraction')
+		# time.sleep(6)
 
 		
 if __name__ == "__main__":

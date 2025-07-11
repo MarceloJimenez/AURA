@@ -1,0 +1,15 @@
+TEXT_title
+<*,*,*,*>: Human Intervention Needed
+----
+IMAGE
+<*,*,*,*>: img/Alert.png
+----
+TEXT
+<*,*,*,*>: I am calling a nurse, please remain calm.
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Explain_5
+----
+TTS
+<*,*,*,*>: I am calling a nurse, please remain calm.
+----
