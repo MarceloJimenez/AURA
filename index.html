@@ -1,70 +1,106 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>AURA - HRI RBC Project</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>AURA - HRI RBC Project</title>
 
-  <script src="qaws.js"></script>
+    <script src="qaws.js"></script>
 
-  <style>
-    body {
-      background-color: #fff;
-      font-family: sans-serif;
-    }
-    h1 {
-      font-weight: normal;
-      font-size: 200%;
-    }
+    <style>
+      body {
+        background-color: #fff;
+        font-family: sans-serif;
+      }
+      h1 {
+        font-weight: normal;
+        font-size: 200%;
+      }
 
-  input[type=button] {
-    background-color: #A01010; /* Red */
-    border: none;
-    border-radius: 8px;
-    color: white;
-    padding: 14px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 24px;
-    margin:10px 10px 10px 10px;
-  }
+      input[type="button"] {
+        background-color: #224fa9; /* Blue */
+        border: none;
+        border-radius: 14px;
+        color: white;
+        padding: 0.75em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 24px;
+        margin: 10px 10px 10px 10px;
+        -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+        box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+      }
+      input[type="button"]:hover {
+        background-color: #1e3f7a; /* Darker Blue */
+        cursor: pointer;
+      }
+      .container {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        max-width: 70%;
+        padding: 2em;
+        border-radius: 50px;
+        background: #dfedf5;
+        background: radial-gradient(circle, rgba(223, 237, 245, 1) 0%, rgba(232, 242, 247, 1) 50%, rgb(183, 222, 255) 100%);
+        -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+        box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+      }
+      .text_box_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+      .avatar {
+        border-radius: 50%;
+        width: 30vw;
+        height: 30vw;
+        object-fit: cover;
+        border: 10px solid #bcdaff; /* Slate */
+        -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+        box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+      }
+      .title {
+        margin-bottom: 2em;
+      }
+      .text_box {
+        font-size: 2em;
+        color: #1e1e1e;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- image -->
+      <div><img class="avatar" id="image_default" src="img/AURA-X.png" alt="No image" /></div>
 
-  </style>
-</head>
-<body>
-		
-    <!-- title -->
-    <h1 align=center> <div align='center' id='text_title'>AURA - HRI RBC Project</div> </h1>
+      <!-- container -->
+      <div class="text_box_container">
+        <!-- title -->
+        <h1 class="title" id="text_title">AURA</h1>
 
-    <!-- image -->
-    <p>
-    <div align='center'> <img width=50% id='image_default' src="img/AURA-X.png" alt="No image"/> </div>
-    </p>
+        <!-- text -->
+        <div class="text_box" id="text_default">Execute the python script to start</div>
 
-    <!-- text -->
-    <p>
-    <h1>
-    <div align='center' id='text_default'>Execute the python script to start</div>
-    </h1>
-    </p>
-
-    <!-- buttons -->
-    <p>
-      <div align='center' id='buttons'>
+        <!-- buttons -->
+        <div id="buttons"></div>
       </div>
-    </p>
+    </div>
 
-  <!-- ****** SCRIPTS ****** -->
-  <script>
-    var ip=window.location.hostname;
-    if (ip=='')
-        ip='127.0.0.1';
-    var port = 9100;
+    <!-- ****** SCRIPTS ****** -->
+    <script>
+      var ip = window.location.hostname;
+      if (ip == "") ip = "127.0.0.1";
+      var port = 9100;
 
-    console.log("Trying connection...")
-    wsrobot_init(ip,port);
-  </script>
-
-</body>
+      console.log("Trying connection...");
+      wsrobot_init(ip, port);
+    </script>
+  </body>
 </html>
-
