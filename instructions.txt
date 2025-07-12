@@ -49,6 +49,9 @@ To simulate the front sonar sensor value(in a new terminal inside the container 
 > cd $PEPPER_TOOLS_HOME/sonar
 > python sonar_sim.py --sensor SonarFront --value 0.75
 
+cd "$PEPPER_TOOLS_HOME/touch" 
+python touch_sim.py --sensor HeadMiddle --duration 2.5
+
 
 
 

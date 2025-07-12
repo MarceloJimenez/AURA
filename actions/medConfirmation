@@ -1,25 +1,25 @@
-TEXT_title
-<*,*,*,*>: Medication
-----
 IMAGE
-<*,*,*,*>: img/medication.png
+<*, *, *, *>: img/medication.png
+----
+TEXT_title
+<*, *, *, *>: Take your medication please
 ----
 TEXT
-<*,*,*,*>: Take your medicine and confirm please.
+<*,*,*,*>: Waiting for touch sensor confirmation
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Explain_10
+----
+TTS
+<*,*,*,*>: Take your medicine please.
 ----
 ASR
 <*,*,*,*>: {'finish': ['yes','ok','confirm'], 'no': ['no','I dont want']}
 ----
-GESTURE
-<*,*,*,*>: animations/Stand/Gestures/Explain_1
-----
-TTS
-<*,*,*,*>: Take your medicine and confirm please.
-----
-BUTTONS
+<!-- BUTTONS
 finish
 <*,*,*,*>: Ok
 no
 <*,*,*,*>: No
-----
+---- -->
 

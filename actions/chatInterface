@@ -13,5 +13,6 @@ GESTURE
 TTS
 <*,*,*,*>: Lets talks, you can ask me anything you want.
 ----
-
-
+BUTTONS
+finish
+<*,*,*,*>:  Done

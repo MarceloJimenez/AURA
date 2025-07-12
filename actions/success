@@ -1,0 +1,16 @@
+TEXT_title
+<*,*,*,*>: Great!
+----
+IMAGE
+<*,*,*,*>: img/success.png
+----
+TEXT
+<*,*,*,*>: You took your medicine
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Explain_1
+----
+TTS
+<*,*,*,*>: Great!, you took your medicine.
+----
+
