@@ -54,4 +54,13 @@ python touch_sim.py --sensor HeadMiddle --duration 2.5
 
 
 
+Useful DOcker commands:
+docker ps 
+
+docker stop <id>
+
+docker container ls
+
+docker rm <id>
+
 

@@ -1,0 +1,17 @@
+TEXT_title
+<*,*,*,*>: Ana Silva
+----
+IMAGE
+<*,*,*,*>: img/profile.png
+----
+TEXT
+<*,*,*,*>: <ul><li>Age: 83</li><li>Medications:<ul><li>Antidepressant</li><li>Vitamin D</li><li>Sleep aid</li></ul></li><li>Medicine due now?: No</li></ul>
+
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Explain_10
+----
+TTS
+<*,*,*,*>: Lets check your medication!
+----
+

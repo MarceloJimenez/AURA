@@ -1,19 +1,19 @@
 TEXT_title
-<*,*,*,*>: Ask me a question!
+<*,*,*,*>: You are not a patient.
 ----
 IMAGE
 <*,*,*,*>: img/chat.png
 ----
 TEXT
-<*,*,*,*>: Chat with me.
+<*,*,*,*>: How can I help you? Chat with me.
 ----
 GESTURE
 <*,*,*,*>: animations/Stand/Gestures/Explain_5
 ----
 TTS
-<*,*,*,*>: Lets talks, you can ask me anything you want.
+<*,*,*,*>: You are not a patient.How can I help you? Chat with me.
 ----
 BUTTONS
-finish
+done
 <*,*,*,*>:  Done
 ----

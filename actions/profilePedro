@@ -1,0 +1,17 @@
+TEXT_title
+<*,*,*,*>: Pedro Perez
+----
+IMAGE
+<*,*,*,*>: img/profile.png
+----
+TEXT
+<*,*,*,*>:<ul><li>Age: 79</li> <li> Medications:<ul> <li>Antihypertensive</li> <li>Aspirin</li></ul></li><li>Medicine due now?: Yes</li></ul>
+
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Explain_10
+----
+TTS
+<*,*,*,*>: Lets check your medication!
+----
+

@@ -1,0 +1,19 @@
+TEXT_title
+<*,*,*,*>: No medication for you now!
+----
+IMAGE
+<*,*,*,*>: img/chat.png
+----
+TEXT
+<*,*,*,*>: How can I help you? Chat with me.
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Explain_5
+----
+TTS
+<*,*,*,*>: No medication for you now! How can I help you? Chat with me.
+----
+BUTTONS
+done
+<*,*,*,*>:  Done
+----

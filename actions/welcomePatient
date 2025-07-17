@@ -2,7 +2,7 @@ IMAGE
 <*, *, *, *>:  img/smile.png
 ----
 TEXT_title
-<*, *, *, *>:  Welcome Marcelo!
+<*, *, *, *>:  Face Identified: Welcome Marcelo!
 ----
 TEXT
 <*,*,*,*>: I hope you are having a great day

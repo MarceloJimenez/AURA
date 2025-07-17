@@ -1,0 +1,16 @@
+IMAGE
+<*, *, *, *>:  img/ana.png
+----
+TEXT_title
+<*, *, *, *>:  Face Identified
+----
+TEXT
+<*,*,*,*>:  Welcome Ana!
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Hey_1
+----
+TTS
+<*,*,*,*>:  Welcome Ana I hope you are having a great day. Let me load your information. Just one second.
+----
+

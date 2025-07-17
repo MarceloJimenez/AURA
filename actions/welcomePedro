@@ -1,0 +1,16 @@
+IMAGE
+<*, *, *, *>:  img/pedro.png
+----
+TEXT_title
+<*, *, *, *>:  Face Identified
+----
+TEXT
+<*,*,*,*>: Welcome Pedro!
+----
+GESTURE
+<*,*,*,*>: animations/Stand/Gestures/Hey_1
+----
+TTS
+<*,*,*,*>:  Welcome Pedro! I hope you are having a great day. Let me load your information. Just one second.
+----
+

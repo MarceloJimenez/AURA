@@ -17,8 +17,10 @@ ASR
 <*,*,*,*>:  {'welcomePatient': ['yes'], 'chatInterface': ['no']}
 ----
 BUTTONS
-welcomePatient
-<*,*,*,*>:  I am a patient!
+pedro-perez
+<*,*,*,*>:  Pedro Perez 
+ana-silva
+<*,*,*,*>:  Ana Silva 
 chatInterface
-<*,*,*,*>:  I am not a patient
+<*,*,*,*>:  Not a patient
 ----
